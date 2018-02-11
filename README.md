@@ -8,7 +8,7 @@ I recommend to install Tensorflow by using [Anaconda](https://conda.io/docs/user
 
 https://www.tensorflow.org/install/install_windows#id=installing_with_anaconda (example for windows)
 
-This repo may also use [TFLearn](http://tflearn.org/getting_started/) which is a Python library on top of Tensorflow and provide High-level API usage.
+This repo may also use [TFLearn](http://tflearn.org/getting_started/) which is a Python library on top of Tensorflow and provide High-level API usage. It also provides a lot of [examples](http://tflearn.org/examples/).
 
 #### Pre-requirements for using GPU with Tensorflow
 

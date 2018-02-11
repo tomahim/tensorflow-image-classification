@@ -43,13 +43,24 @@ display(0)
 print("Predicted %d, Label: %d" % (classifier.predict(np.array([test_data[0]], dtype=float), as_iterable=False), test_labels[8]))
 display(8)
 
-# weights = classifier.weights_
-# f, axes = plt.subplots(2, 5, figsize=(10,4))
-# axes = axes.reshape(-1)
-# for i in range(len(axes)):
-#     a = axes[i]
-#     a.imshow(weights.T[i].reshape(28, 28), cmap=plt.cm.seismic)
-#     a.set_title(i)
-#     a.set_xticks(()) # ticks be gone
-#     a.set_yticks(())
-# plt.show()
+# def get_weights():
+#     with tf.variable_scope("linear/weight", reuse=tf.AUTO_REUSE):
+#         v = tf.get_variable("v", [784, 10])
+#     return v
+#
+#
+# with tf.Session() as sess:
+#     new_saver = tf.train.import_meta_graph('/tmp/tmpgr6c9wcp/model.ckpt-1.meta')
+#     new_saver.restore(sess, tf.train.latest_checkpoint('/tmp/tmpgr6c9wcp/'))
+#     print(tf.all_variables)
+#
+#     weights = sess.run(tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES))
+#     f, axes = plt.subplots(2, 5, figsize=(10, 4))
+#     axes = axes.reshape(-1)
+#     for i in range(len(axes)):
+#         a = axes[i]
+#         a.imshow(tf.reshape(weights[i], [28, 28]), cmap=plt.cm.seismic)
+#         a.set_title(i)
+#         a.set_xticks(())  # ticks be gone
+#         a.set_yticks(())
+#     plt.show()
